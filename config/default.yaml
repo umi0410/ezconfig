@@ -1,0 +1,10 @@
+environment: default
+api:
+  root: https://localhost:8080/api/
+  auth:
+    type: basic
+    basic:
+      username: admin
+      password: 123123
+    jwt:
+      token: "input.your.token"

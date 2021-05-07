@@ -1,0 +1,9 @@
+environment: this should be local # 환경변수를 통해 "local"로 오버라이딩 되어야함.
+api:
+  root: https://localhost:8080/api/
+  auth:
+    type: basic
+    basic:
+      # username은 default 그대로 사용하고 password만 오버라이딩
+      # username: admin
+      password: "simple local password"

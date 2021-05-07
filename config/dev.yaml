@@ -1,0 +1,8 @@
+api:
+  root: https://api.jinsu.go/
+  auth:
+    # type은 env를 통해 override
+    basic:
+      password: "complex dev password"
+    jwt:
+      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIifQ.UIZchxQD36xuhacrJF9HQ5SIUxH5HBiv9noESAacsxU"
