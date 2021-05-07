@@ -29,7 +29,7 @@ func TestDefaultConfig(t *testing.T) {
 	t.Log("EZ_ENVIRONMENT: \"\"")
 	os.Setenv("EZ_ENVIRONMENT", "")
 	cfg := &ExampleConfig{}
-	LoadConfig("EZ", cfg)
+	LoadConfig("EZ", cfg, []string{"./example_config"})
 
 	assert.Equal(t, "default", cfg.Environment)
 	assert.Equal(t, "basic", cfg.Api.Auth.Type)
@@ -41,7 +41,7 @@ func TestLocalConfig(t *testing.T) {
 	t.Log("EZ_ENVIRONMENT: local")
 	os.Setenv("EZ_ENVIRONMENT", "local")
 	cfg := &ExampleConfig{}
-	LoadConfig("EZ", cfg)
+	LoadConfig("EZ", cfg, []string{"./example_config"})
 
 	// cfg.Environment는 환경변수를 따라 오버라이딩됨.
 	assert.Equal(t, "local", cfg.Environment)
@@ -58,7 +58,7 @@ func TestDevConfig_UsingBasic(t *testing.T) {
 	os.Setenv("EZ_ENVIRONMENT", "dev")
 	os.Setenv("EZ_API.AUTH.TYPE", "basic")
 	cfg := &ExampleConfig{}
-	LoadConfig("EZ", cfg)
+	LoadConfig("EZ", cfg, []string{"./example_config"})
 
 	// cfg.Environment는 환경변수를 따라 오버라이딩됨.
 	assert.Equal(t, "dev", cfg.Environment)
@@ -73,7 +73,7 @@ func TestDevConfig_UsingJwt(t *testing.T) {
 	os.Setenv("EZ_ENVIRONMENT", "dev")
 	os.Setenv("EZ_API.AUTH.TYPE", "jwt")
 	cfg := &ExampleConfig{}
-	LoadConfig("EZ", cfg)
+	LoadConfig("EZ", cfg, []string{"./example_config"})
 
 	// cfg.Environment는 환경변수를 따라 오버라이딩됨.
 	assert.Equal(t, "dev", cfg.Environment)
