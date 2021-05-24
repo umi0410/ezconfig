@@ -73,4 +73,5 @@ foo: bar
 
 # 사용된 곳
 
-* [khumu-comment](https://github.com/khu-dev/khumu-comment) - 경희대학교 커뮤니티 서비스의 댓글 서비스
+* [khumu-comment](https://github.com/khu-dev/khumu-comment) - 경희대학교 커뮤니티 서비스 쿠뮤의 댓글 서비스
+* [khumu-bumblebee](https://github.com/khu-dev/khumu-bumblebee) - 경희대학교 커뮤니티 서비스 쿠뮤의 이미지 업로드 및 변환 서비스

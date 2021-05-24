@@ -13,7 +13,7 @@ func LoadConfig(envPrefix string, cfg interface{}, paths []string) interface{} {
 			viper.AddConfigPath(p)
 		}
 	}
-	viper.SetEnvPrefix("envPrefix")
+	viper.SetEnvPrefix(envPrefix)
 	//viper.SetEnvKeyReplacer(strings.NewReplacer())
 	viper.AutomaticEnv()
 
